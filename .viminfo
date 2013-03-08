@@ -17,9 +17,9 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
 :q
 :w
+:wq
 :set wrap
 :wrap
 :'<,'>s:\n::gc
@@ -804,18 +804,21 @@ $
 	 
 
 # File marks:
-'0  95  0  ~/.vimrc
-'1  112  0  ~/dev/report/src/report.py
-'2  92  13  ~/.vimrc
-'3  107  4  ~/dev/report/src/report.py
-'4  11  0  ~/.vimrc
-'5  96  37  ~/dev/report/src/report.py
-'6  95  55  ~/dev/report/src/report.py
-'7  243  14  ~/dev/report/src/report.py
-'8  138  8  ~/dev/report/src/report.py
-'9  44  29  ~/dev/report/src/get_date_info.py
+'0  1  0  ~/.bashrc
+'1  2  0  ~/.git/COMMIT_EDITMSG
+'2  95  0  ~/.vimrc
+'3  112  0  ~/dev/report/src/report.py
+'4  92  13  ~/.vimrc
+'5  107  4  ~/dev/report/src/report.py
+'6  11  0  ~/.vimrc
+'7  96  37  ~/dev/report/src/report.py
+'8  95  55  ~/dev/report/src/report.py
+'9  243  14  ~/dev/report/src/report.py
 
 # Jumplist (newest first):
+-'  1  0  ~/.bashrc
+-'  2  0  ~/.git/COMMIT_EDITMSG
+-'  1  0  ~/.git/COMMIT_EDITMSG
 -'  95  0  ~/.vimrc
 -'  154  0  ~/.vimrc
 -'  92  0  ~/.vimrc
@@ -911,9 +914,17 @@ $
 -'  88  8  ~/dev/report/src/get_date_info.py
 -'  87  8  ~/dev/report/src/get_date_info.py
 -'  181  7  ~/dev/report/src/get_date_info.py
--'  145  8  ~/dev/report/src/get_date_info.py
 
 # History of marks within files (newest to oldest):
+
+> ~/.bashrc
+	"	1	0
+
+> ~/.git/COMMIT_EDITMSG
+	"	2	0
+	^	2	0
+	.	1	21
+	+	1	21
 
 > ~/.vimrc
 	"	95	0
@@ -1342,9 +1353,3 @@ $
 
 > ~/Music/pithos_save/picard-1.1/setup.py
 	"	91	0
-
-> /tmp/pianobar/pianobar/src/settings.c
-	"	362	0
-
-> /tmp/make_diskless_vm.sh
-	"	1	0
