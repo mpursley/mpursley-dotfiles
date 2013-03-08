@@ -93,6 +93,7 @@ set wrap      " automatically wrap on load
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
+
 " easier formatting of paragraphs
 vmap Q gq
 nmap Q gqap
