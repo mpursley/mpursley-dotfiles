@@ -17,9 +17,9 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
 :q
 :w
+:wq
 :set wrap
 :wrap
 :'<,'>s:\n::gc
@@ -775,50 +775,51 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	""set nowrap  " don't automatically wrap on load
+"0	BLOCK	9
+	1234567890
 ""1	LINE	0
-	
+	1234567890123456789012345678901234567890123456789012345678901234567891234567890
 "2	LINE	0
+	
+"3	LINE	0
 	set wrap
-"3	CHAR	0
-	next
 "4	CHAR	0
+	next
+"5	CHAR	0
 	this
-"5	LINE	0
+"6	LINE	0
 	    elif arg == "last_decade":
 	        return cert_last_decade
-"6	LINE	0
+"7	LINE	0
 	    elif arg == "last_year":
 	        return cert_last_year
-"7	LINE	0
-	
 "8	LINE	0
+	
+"9	LINE	0
 	    elif arg == "last_month":
 	        return cert_last_month
-"9	LINE	0
-	    this_month_first_day = datetime.datetime(now.year, now.month, 1)
 "k	CHAR	0
 	kkjjkkkkkkkkkkkkkkkkkkkkkkk
 "-	CHAR	0
-	 
+	0
 
 # File marks:
 '0  95  0  ~/.vimrc
-'1  96  0  ~/.vimrc
-'2  112  0  ~/dev/report/src/report.py
-'3  92  13  ~/.vimrc
-'4  107  4  ~/dev/report/src/report.py
-'5  11  0  ~/.vimrc
-'6  96  37  ~/dev/report/src/report.py
-'7  95  55  ~/dev/report/src/report.py
-'8  243  14  ~/dev/report/src/report.py
-'9  138  8  ~/dev/report/src/report.py
+'1  1  0  ~/.bashrc
+'2  96  0  ~/.vimrc
+'3  96  0  ~/.vimrc
+'4  112  0  ~/dev/report/src/report.py
+'5  92  13  ~/.vimrc
+'6  107  4  ~/dev/report/src/report.py
+'7  11  0  ~/.vimrc
+'8  96  37  ~/dev/report/src/report.py
+'9  95  55  ~/dev/report/src/report.py
 
 # Jumplist (newest first):
 -'  95  0  ~/.vimrc
+-'  96  1  ~/.vimrc
+-'  1  0  ~/.bashrc
 -'  190  0  ~/.vimrc
--'  96  0  ~/.vimrc
 -'  155  0  ~/.vimrc
 -'  92  0  ~/.vimrc
 -'  112  0  ~/dev/report/src/report.py
@@ -910,9 +911,6 @@ $
 -'  90  8  ~/dev/report/src/get_date_info.py
 -'  44  29  ~/dev/report/src/get_date_info.py
 -'  89  8  ~/dev/report/src/get_date_info.py
--'  88  8  ~/dev/report/src/get_date_info.py
--'  87  8  ~/dev/report/src/get_date_info.py
--'  181  7  ~/dev/report/src/get_date_info.py
 
 # History of marks within files (newest to oldest):
 
@@ -920,8 +918,6 @@ $
 	"	95	0
 	^	95	0
 	.	95	0
-	+	14	0
-	+	15	0
 	+	14	0
 	+	15	0
 	+	14	0
@@ -1019,7 +1015,12 @@ $
 	+	88	13
 	+	89	13
 	+	96	0
+	+	96	9
+	+	96	0
 	+	95	0
+
+> ~/.bashrc
+	"	1	0
 
 > ~/dev/report/src/report.py
 	"	112	0
@@ -1346,6 +1347,3 @@ $
 
 > /tmp/pianobar/pianobar/src/settings.c
 	"	362	0
-
-> /tmp/make_diskless_vm.sh
-	"	1	0
