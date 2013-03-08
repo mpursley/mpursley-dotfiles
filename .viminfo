@@ -17,8 +17,8 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
 :w
 :set wrap
 :wrap
@@ -66,6 +66,7 @@ $
 :map v i    j|
 
 # Search String History (newest to oldest):
+??wrap
 ?/wrap
 ? \s\+$
 ?/asdf
@@ -765,7 +766,6 @@ $
 ? \s\+$
 ? \s\+$
 ? get_date
-? \s\+$
 
 # Expression History (newest to oldest):
 
@@ -777,48 +777,50 @@ $
 # Registers:
 "0	LINE	0
 	""set nowrap  " don't automatically wrap on load
-"1	LINE	0
+""1	LINE	0
+	
+"2	LINE	0
 	set wrap
-"2	CHAR	0
-	next
 "3	CHAR	0
+	next
+"4	CHAR	0
 	this
-"4	LINE	0
+"5	LINE	0
 	    elif arg == "last_decade":
 	        return cert_last_decade
-"5	LINE	0
+"6	LINE	0
 	    elif arg == "last_year":
 	        return cert_last_year
-"6	LINE	0
-	
 "7	LINE	0
+	
+"8	LINE	0
 	    elif arg == "last_month":
 	        return cert_last_month
-"8	LINE	0
-	    this_month_first_day = datetime.datetime(now.year, now.month, 1)
 "9	LINE	0
-	    this_month_last_day_ymd0 = make_ymd0(this_month_last_day)
+	    this_month_first_day = datetime.datetime(now.year, now.month, 1)
 "k	CHAR	0
 	kkjjkkkkkkkkkkkkkkkkkkkkkkk
-""-	CHAR	0
+"-	CHAR	0
 	 
 
 # File marks:
-'0  112  0  ~/dev/report/src/report.py
-'1  92  13  ~/.vimrc
-'2  107  4  ~/dev/report/src/report.py
-'3  11  0  ~/.vimrc
-'4  96  37  ~/dev/report/src/report.py
-'5  95  55  ~/dev/report/src/report.py
-'6  243  14  ~/dev/report/src/report.py
-'7  138  8  ~/dev/report/src/report.py
-'8  44  29  ~/dev/report/src/get_date_info.py
-'9  64  0  ~/dev/report/src/get_cert_info.py
+'0  95  0  ~/.vimrc
+'1  112  0  ~/dev/report/src/report.py
+'2  92  13  ~/.vimrc
+'3  107  4  ~/dev/report/src/report.py
+'4  11  0  ~/.vimrc
+'5  96  37  ~/dev/report/src/report.py
+'6  95  55  ~/dev/report/src/report.py
+'7  243  14  ~/dev/report/src/report.py
+'8  138  8  ~/dev/report/src/report.py
+'9  44  29  ~/dev/report/src/get_date_info.py
 
 # Jumplist (newest first):
+-'  95  0  ~/.vimrc
+-'  154  0  ~/.vimrc
+-'  92  0  ~/.vimrc
 -'  112  0  ~/dev/report/src/report.py
 -'  107  4  ~/dev/report/src/report.py
--'  92  13  ~/.vimrc
 -'  90  6  ~/.vimrc
 -'  11  0  ~/.vimrc
 -'  1  0  ~/.vimrc
@@ -910,11 +912,113 @@ $
 -'  87  8  ~/dev/report/src/get_date_info.py
 -'  181  7  ~/dev/report/src/get_date_info.py
 -'  145  8  ~/dev/report/src/get_date_info.py
--'  92  13  ~/.vimrc
--'  90  6  ~/.vimrc
--'  11  0  ~/.vimrc
 
 # History of marks within files (newest to oldest):
+
+> ~/.vimrc
+	"	95	0
+	^	89	14
+	.	95	0
+	+	10	0
+	+	14	0
+	+	15	0
+	+	14	0
+	+	15	0
+	+	14	0
+	+	15	0
+	+	21	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	33	0
+	+	34	0
+	+	35	0
+	+	39	0
+	+	40	0
+	+	39	16
+	+	40	16
+	+	45	0
+	+	46	0
+	+	47	0
+	+	48	0
+	+	63	0
+	+	64	0
+	+	52	0
+	+	53	0
+	+	52	0
+	+	57	0
+	+	67	0
+	+	69	0
+	+	70	0
+	+	73	0
+	+	73	13
+	+	82	0
+	+	83	0
+	+	84	0
+	+	88	0
+	+	89	0
+	+	90	0
+	+	92	0
+	+	93	0
+	+	94	0
+	+	96	0
+	+	96	9
+	+	96	0
+	+	73	0
+	+	102	0
+	+	103	0
+	+	107	0
+	+	108	0
+	+	109	0
+	+	110	0
+	+	111	0
+	+	115	0
+	+	116	0
+	+	117	0
+	+	118	0
+	+	123	0
+	+	124	0
+	+	125	0
+	+	129	0
+	+	132	0
+	+	143	0
+	+	149	0
+	+	150	0
+	+	151	0
+	+	152	0
+	+	158	0
+	+	159	0
+	+	160	0
+	+	161	0
+	+	162	0
+	+	163	0
+	+	164	0
+	+	165	0
+	+	166	0
+	+	156	0
+	+	170	0
+	+	171	0
+	+	172	0
+	+	173	0
+	+	174	0
+	+	175	0
+	+	176	0
+	+	177	0
+	+	178	0
+	+	179	0
+	+	180	0
+	+	182	0
+	+	183	0
+	+	189	0
+	+	104	0
+	+	10	0
+	+	11	0
+	+	90	1
+	+	92	1
+	+	91	13
+	+	88	13
+	+	89	13
+	+	95	0
 
 > ~/dev/report/src/report.py
 	"	112	0
@@ -1020,111 +1124,6 @@ $
 	+	96	0
 	+	95	54
 	+	96	37
-
-> ~/.vimrc
-	"	92	13
-	^	89	14
-	.	89	13
-	+	9	0
-	+	10	0
-	+	14	0
-	+	15	0
-	+	14	0
-	+	15	0
-	+	14	0
-	+	15	0
-	+	21	0
-	+	27	0
-	+	28	0
-	+	29	0
-	+	33	0
-	+	34	0
-	+	35	0
-	+	39	0
-	+	40	0
-	+	39	16
-	+	40	16
-	+	45	0
-	+	46	0
-	+	47	0
-	+	48	0
-	+	63	0
-	+	64	0
-	+	52	0
-	+	53	0
-	+	52	0
-	+	57	0
-	+	67	0
-	+	69	0
-	+	70	0
-	+	73	0
-	+	73	13
-	+	82	0
-	+	83	0
-	+	84	0
-	+	88	0
-	+	89	0
-	+	90	0
-	+	92	0
-	+	93	0
-	+	94	0
-	+	97	0
-	+	97	9
-	+	97	0
-	+	73	0
-	+	103	0
-	+	104	0
-	+	108	0
-	+	109	0
-	+	110	0
-	+	111	0
-	+	112	0
-	+	116	0
-	+	117	0
-	+	118	0
-	+	119	0
-	+	124	0
-	+	125	0
-	+	126	0
-	+	130	0
-	+	133	0
-	+	144	0
-	+	150	0
-	+	151	0
-	+	152	0
-	+	153	0
-	+	159	0
-	+	160	0
-	+	161	0
-	+	162	0
-	+	163	0
-	+	164	0
-	+	165	0
-	+	166	0
-	+	167	0
-	+	157	0
-	+	171	0
-	+	172	0
-	+	173	0
-	+	174	0
-	+	175	0
-	+	176	0
-	+	177	0
-	+	178	0
-	+	179	0
-	+	180	0
-	+	181	0
-	+	183	0
-	+	184	0
-	+	190	0
-	+	105	0
-	+	10	0
-	+	11	0
-	+	90	1
-	+	92	1
-	+	91	13
-	+	88	13
-	+	89	13
 
 > ~/dev/report/src/get_date_info.py
 	"	146	6
