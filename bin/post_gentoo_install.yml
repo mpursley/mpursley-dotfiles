@@ -1,0 +1,42 @@
+## An ansible playbook for settingup my MattP's workstations...
+- hosts: workstation
+  tasks:
+    - debug: msg="Checking for user mpursley..."
+    - user: name=mpursley comment="Matt Pursley" uid=1000 groups=wheel,audio,video,ykadmin shell=/bin/bash
+
+    - debug: msg="emerge --sync"
+    - portage: sync=yes verbose=yes
+
+    - debug: msg="checking for ansible"
+    - portage: package=ansible update=yes verbose=yes
+
+    - debug: msg="checking for i3"
+    - portage: package=i3 update=yes verbose=yes
+
+    - debug: msg="checking for i3status"
+    - portage: package=i3status update=yes verbose=yes
+
+    - debug: msg="checking for dmenu"
+    - portage: package=dmenu update=yes verbose=yes
+
+    - debug: msg="checking for moc"
+    - portage: package=moc update=yes verbose=yes
+
+    - debug: msg="checking for baobab"
+    - portage: package=baobab update=yes verbose=yes
+
+    - debug: msg="checking for volti"
+    - portage: package=volti update=yes verbose=yes
+
+    - debug: msg="checking for x11vnc"
+    - portage: package=x11vnc update=yes verbose=yes
+
+    - debug: msg="checking for parcellite"
+    - portage: package=parcellite update=yes verbose=yes
+
+    - debug: msg="checking for keepassxc"
+    - portage: package=keepassxc update=yes verbose=yes
+
+    - debug: msg="checking for media-video/libva-utils"
+    - portage: package=libva-utils update=yes verbose=yes
+
