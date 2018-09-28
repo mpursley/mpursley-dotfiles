@@ -1,7 +1,7 @@
 export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$\[\033[00m\] "
 
-eval `~/bin/ssr`
-xset -r r rate 200
+#eval `~/bin/ssr`
+#xset -r r rate 200
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:~/bin
 export GOPATH=/home/mpursley/go
@@ -36,4 +36,5 @@ alias gp="git pull --rebase upstream master"
 ALL_PROXY=socks5://localhost:1080
 
 # this is to fix some clipboard issues..
-printf "\e[?2004l" > /dev/null
+#printf "\e[?2004l" > /dev/null
+

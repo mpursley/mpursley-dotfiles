@@ -1,5 +1,5 @@
 " Added for Vundle...
-"set nocompatible              " required
+set nocompatible              " required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+"call vundle#begin('~/.vim/bundle')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -25,8 +25,18 @@ Plugin 'scrooloose/nerdtree'
 " install SimpleFold
 Plugin 'tmhedberg/SimpylFold'
 
-" add to .vimrc
+" add vim-colorschemes
 Plugin 'flazz/vim-colorschemes'
+
+" add jedi-vim
+Plugin 'davidhalter/jedi-vim'
+
+" add ctags
+Plugin 'universal-ctags/ctags'
+
+" add surround
+Plugin 'tpope/vim-surround'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -34,11 +44,16 @@ filetype plugin indent on    " required
 " /Added for Vundle...
 
 
+" add recursive paths
+set path+=**
+set wildmenu
 
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
+" Make jedi-vim use tabs, not buffers
+let g:jedi#use_tabs_not_buffers = 1
 
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
@@ -68,7 +83,7 @@ let mapleader = ","
 
 
 " Quicksave command
-"noremap <C-Z> :update<CR>
+noremap <C-Z> :update<CR>:suspend<CR>
 vnoremap <C-Z> <C-C>:update<CR>
 inoremap <C-Z> <C-O>:update<CR>
 
@@ -91,7 +106,7 @@ map <Leader>, <esc>:tabprevious<CR>
 map <Leader>. <esc>:tabnext<CR>
 
 " start NerdTree
-map <Leader>n <esc>:NERDTree<CR>
+map <Leader>f <esc>:NERDTree<CR>
 
 " start NerdTree
 map <Leader>b <esc>:MiniBufExplorer<CR>
@@ -167,8 +182,6 @@ set smartcase
 set nobackup
 set nowritebackup
 set noswapfile
-
-set nocompatible
 
 " Enable folding
 set foldmethod=indent
