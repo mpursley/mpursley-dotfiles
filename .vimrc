@@ -31,9 +31,6 @@ Plugin 'flazz/vim-colorschemes'
 "add jedi-vim
 Plugin 'davidhalter/jedi-vim'
 
-" add ctags
-"Plugin 'universal-ctags/ctags'
-
 " add surround
 "Plugin 'tpope/vim-surround'
 
