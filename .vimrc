@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/.vim/bundle')
+"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -23,49 +23,55 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 
 " install SimpleFold
-Plugin 'tmhedberg/SimpylFold'
+"Plugin 'tmhedberg/SimpylFold'
 
 " add vim-colorschemes
 Plugin 'flazz/vim-colorschemes'
 
-" add jedi-vim
+"add jedi-vim
 Plugin 'davidhalter/jedi-vim'
 
 " add ctags
-Plugin 'universal-ctags/ctags'
+"Plugin 'universal-ctags/ctags'
 
 " add surround
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 
 
 call vundle#end()            " required
-filetype plugin indent on    " required
+"filetype plugin indent on    " required
 "
 " /Added for Vundle...
 
 
 " add recursive paths
 set path+=**
+
+" turn on the wildmenu, from python-mode
 set wildmenu
 
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-" Make jedi-vim use tabs, not buffers
-let g:jedi#use_tabs_not_buffers = 1
 
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
 
-set pastetoggle=<F2>
+"set pastetoggle=<F2>
 "set clipboard=unnamed
 
 
 " Mouse and backspace
 set mouse=a  " on OSX press ALT and click
 set bs=2     " make backspace behave like normal again
+" This is a fix for resizing vim splits while inside tmux
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 
 
 " Rebind <Leader> key
@@ -128,18 +134,16 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
 
-" Color scheme
-" mkdir -p ~/.vim/colors && cd ~/.vim/colors
-" wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
+"" add 256 color scheme (this also requires Plugin 'flazz/vim-colorschemes')
 set t_Co=256
 color wombat256mod
 
 
 " Enable syntax highlighting
-" You need to reload this file for the change to apply
 filetype off
 filetype plugin indent on
 syntax on
+set relativenumber
 
 
 "" Showing line numbers and length
@@ -196,3 +200,5 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+
+
