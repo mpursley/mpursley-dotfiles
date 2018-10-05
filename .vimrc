@@ -1,5 +1,5 @@
 " Added for Vundle...
-"set nocompatible              " required
+set nocompatible              " required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -23,17 +23,32 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 
 " install SimpleFold
-Plugin 'tmhedberg/SimpylFold'
+"Plugin 'tmhedberg/SimpylFold'
 
-" add to .vimrc
+" add vim-colorschemes
 Plugin 'flazz/vim-colorschemes'
 
+"add jedi-vim
+Plugin 'davidhalter/jedi-vim'
+
+" add ctags
+"Plugin 'universal-ctags/ctags'
+
+" add surround
+"Plugin 'tpope/vim-surround'
+
+
 call vundle#end()            " required
-filetype plugin indent on    " required
+"filetype plugin indent on    " required
 "
 " /Added for Vundle...
 
 
+" add recursive paths
+set path+=**
+
+" turn on the wildmenu, from python-mode
+set wildmenu
 
 
 " Automatic reloading of .vimrc
@@ -44,13 +59,19 @@ autocmd! bufwritepost .vimrc source %
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
 
-set pastetoggle=<F2>
+"set pastetoggle=<F2>
 "set clipboard=unnamed
 
 
 " Mouse and backspace
 set mouse=a  " on OSX press ALT and click
 set bs=2     " make backspace behave like normal again
+" This is a fix for resizing vim splits while inside tmux
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 
 
 " Rebind <Leader> key
@@ -68,7 +89,7 @@ let mapleader = ","
 
 
 " Quicksave command
-"noremap <C-Z> :update<CR>
+noremap <C-Z> :update<CR>:suspend<CR>
 vnoremap <C-Z> <C-C>:update<CR>
 inoremap <C-Z> <C-O>:update<CR>
 
@@ -91,7 +112,7 @@ map <Leader>, <esc>:tabprevious<CR>
 map <Leader>. <esc>:tabnext<CR>
 
 " start NerdTree
-map <Leader>n <esc>:NERDTree<CR>
+map <Leader>f <esc>:NERDTree<CR>
 
 " start NerdTree
 map <Leader>b <esc>:MiniBufExplorer<CR>
@@ -113,18 +134,16 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
 
-" Color scheme
-" mkdir -p ~/.vim/colors && cd ~/.vim/colors
-" wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
+"" add 256 color scheme (this also requires Plugin 'flazz/vim-colorschemes')
 set t_Co=256
 color wombat256mod
 
 
 " Enable syntax highlighting
-" You need to reload this file for the change to apply
 filetype off
 filetype plugin indent on
 syntax on
+set relativenumber
 
 
 "" Showing line numbers and length
@@ -168,8 +187,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set nocompatible
-
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
@@ -183,3 +200,5 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+
+
