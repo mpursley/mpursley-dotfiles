@@ -3,7 +3,11 @@ export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(gi
 #eval `~/bin/ssr`
 #xset -r r rate 200
 export EDITOR=/usr/bin/vim
-export PATH=$PATH:~/bin
+
+if test $(uname) == "Darwin" ; then
+	export PATH=$PATH:~/bin:/opt/gaikai-osx-opensshx509/bin
+fi
+
 export GOPATH=/home/mpursley/go
 
 ## Share history across shells...
