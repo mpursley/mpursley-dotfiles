@@ -1,11 +1,12 @@
 export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$\[\033[00m\] "
 
-#eval `~/bin/ssr`
-#xset -r r rate 200
+eval `~/bin/ssr`
 export EDITOR=/usr/bin/vim
-
+export PATH=$PATH:~/bin
 if test $(uname) == "Darwin" ; then
-	export PATH=$PATH:~/bin:/opt/gaikai-osx-opensshx509/bin
+	export PATH=~/bin:/opt/gaikai-osx-opensshx509/bin:$PATH
+else
+	xset -r r rate 250 50
 fi
 
 export GOPATH=/home/mpursley/go
@@ -42,3 +43,5 @@ ALL_PROXY=socks5://localhost:1080
 # this is to fix some clipboard issues..
 #printf "\e[?2004l" > /dev/null
 
+# If there is a .bashrc file for this host, source it.
+[ -f ~/.bashrc_$(hostname) ] && source ~/.bashrc_$(hostname)

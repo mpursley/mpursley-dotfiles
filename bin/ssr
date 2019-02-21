@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Add a few extra DEBUG lines
+#DEBUG="yes"
+
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+     chmod 600 "${SSH_ENV}"
+     cat "${SSH_ENV}" # > /dev/null
+     . "${SSH_ENV}" > /dev/null
+     /usr/bin/ssh-add ~/.ssh/id_crt ~/.ssh/id_rsa;
+}
+
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+	 # If there _is_ a file at ${SSH_ENV} then source that file...
+     test $DEBUG && echo echo -e "\\\\nDebug: ssh environment file found at: ${SSH_ENV}\\\\n
+	 Sourcing that file now.\\\\n\\\\n"
+     . "${SSH_ENV}" > /dev/null
+	 # If there is no ssh-agent running, that start a new one
+     ps ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+		echo echo -e "\\\\nWarning: No ssh process found.\\n
+		Starting a new ssh-agent process and adding keys to it now.\\\\n\\\\n"
+        start_agent;
+     }
+else
+	 # If there _is not_ an environment file, than start a new agent
+	 echo echo -e "\\\\nWarning: No ssh environment file found at: ${SSH_ENV}\\\\n
+	 Starting a new ssh-agent process and adding keys to it now. \\\\n\\\\n"
+     start_agent;
+fi
