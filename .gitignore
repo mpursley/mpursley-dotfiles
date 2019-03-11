@@ -2,3 +2,5 @@
 .swp
 .viminfo
 .ssh
+!.ssh/config
+.vim/bundle/YouCompleteMe
