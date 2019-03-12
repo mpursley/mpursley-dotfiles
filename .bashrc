@@ -2,7 +2,7 @@ export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(gi
 
 eval `~/bin/ssr`
 export EDITOR=/usr/bin/vim
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:~/go/bin
 if test $(uname) == "Darwin" ; then
 	export PATH=~/bin:/opt/gaikai-osx-opensshx509/bin:$PATH
 else
