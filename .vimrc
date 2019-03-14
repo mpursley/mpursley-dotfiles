@@ -1,3 +1,4 @@
+
 " Added for Vundle...
 set nocompatible              " required
 filetype off                  " required
@@ -36,6 +37,9 @@ Plugin 'davidhalter/jedi-vim'
 
 " add surround
 "Plugin 'tpope/vim-surround'
+
+" add ctrlp
+Plugin 'kien/ctrlp.vim'
 
 
 call vundle#end()            " required
