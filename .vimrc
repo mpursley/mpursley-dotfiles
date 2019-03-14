@@ -41,19 +41,16 @@ Plugin 'davidhalter/jedi-vim'
 " add ctrlp
 Plugin 'kien/ctrlp.vim'
 
-
 call vundle#end()            " required
 "filetype plugin indent on    " required
 "
 " /Added for Vundle...
-
 
 " add recursive paths
 set path+=**
 
 " turn on the wildmenu, from python-mode
 set wildmenu
-
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
