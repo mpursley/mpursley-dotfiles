@@ -13,13 +13,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-
-" ...
-
-" All of your Plugins must be added before the following line
-
 " added nerdtree
 Plugin 'scrooloose/nerdtree'
 
@@ -41,6 +34,14 @@ Plugin 'davidhalter/jedi-vim'
 " add ctrlp
 Plugin 'kien/ctrlp.vim'
 
+" add flake8
+Plugin 'nvie/vim-flake8'
+
+" add python-mode
+Plugin 'python-mode/python-mode'
+
+" add pyflakes
+Plugin 'kevinw/pyflakes-vim'
 
 call vundle#end()            " required
 "filetype plugin indent on    " required
@@ -119,7 +120,7 @@ map <Leader>. <esc>:tabnext<CR>
 map <Leader>f <esc>:NERDTree<CR>
 
 " start NerdTree
-map <Leader>b <esc>:MiniBufExplorer<CR>
+map <Leader>e <esc>:MiniBufExplorer<CR>
 
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
@@ -147,12 +148,12 @@ color wombat256mod
 filetype off
 filetype plugin indent on
 syntax on
-set relativenumber
 
 
 "" Showing line numbers and length
 set number    " show line numbers
 set tw=120     " width of document (used by gd)
+set relativenumber
 ""set nowrap  " don't automatically wrap on load
 set wrap      " automatically wrap on load
 ""set fo-=t   " don't automatically wrap text when typing
@@ -206,3 +207,10 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix |
 
 
+let g:jedi#use_tabs_not_buffers = 1
+
+
+" powerline
+set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
+set laststatus=2
+set t_Co=256
