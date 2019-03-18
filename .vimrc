@@ -48,13 +48,11 @@ call vundle#end()            " required
 "
 " /Added for Vundle...
 
-
 " add recursive paths
 set path+=**
 
 " turn on the wildmenu, from python-mode
 set wildmenu
-
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %

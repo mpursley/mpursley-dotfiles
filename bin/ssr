@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Add a few extra DEBUG lines
-#DEBUG="yes"
+# To add a few extra DEBUG lines, set debug="yes"
+#debug="yes"
 
 SSH_ENV="$HOME/.ssh/environment"
 
