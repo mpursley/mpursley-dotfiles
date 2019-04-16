@@ -1,4 +1,4 @@
-## mpursley's .bashrc file
+## mpursley's .bashrc file https://github.com/mpursley/mpursley-dotfiles/blob/master/.bashrc
 
 ## update the shell prompt
 export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$\[\033[00m\] "
