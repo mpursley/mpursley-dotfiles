@@ -1,9 +1,14 @@
+## mpursley's .bashrc file
+
+## update the shell prompt
 export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$\[\033[00m\] "
 
+## import my ssh keys into the ssh agent
 eval `~/bin/ssr`
+
+## add some envvars
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:~/bin:~/go/bin
-
 export GOPATH=/home/mpursley/go
 
 ## Share history across shells...
