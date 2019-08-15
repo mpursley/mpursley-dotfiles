@@ -16,15 +16,17 @@ function start_agent {
 # Source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
 	 # If there _is_ a file at ${SSH_ENV} then source that file...
-     test $DEBUG && echo echo -e "\\\\nDebug: ssh environment file found at: ${SSH_ENV}\\\\n
+     test $DEBUG && echo echo -e "\\\\nDebug: ssh environment file found at: ${SSH_ENV}\\\\n \
 	 Sourcing that file now.\\\\n\\\\n"
-     . "${SSH_ENV}" > /dev/null
+     echo source "${SSH_ENV}"
 	 # If there is no ssh-agent running, that start a new one
-     ps ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-		echo echo -e "\\\\nWarning: No ssh process found.\\n
+     ps ${SSH_AGENT_PID} | grep 'ssh-agent$' || {
+		echo echo -e "\\\\nWarning: No ssh-agent process found.\\n
 		Starting a new ssh-agent process and adding keys to it now.\\\\n\\\\n"
         start_agent;
-     }
+     } && {
+		 echo echo -e "ssh-agent process found.. using that one..."
+	 }
 else
 	 # If there _is not_ an environment file, than start a new agent
 	 echo echo -e "\\\\nWarning: No ssh environment file found at: ${SSH_ENV}\\\\n

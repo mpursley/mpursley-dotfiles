@@ -1,10 +1,13 @@
 ## mpursley's .bashrc file https://github.com/mpursley/mpursley-dotfiles/blob/master/.bashrc
 
+source ~/.ssh/environment
+
 ## update the shell prompt
 export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$\[\033[00m\] "
 
 ## import my ssh keys into the ssh agent
-eval `~/bin/ssr`
+#sh -x ~/bin/ssr
+#eval `~/bin/ssr`
 
 ## add some envvars
 export EDITOR=/usr/bin/vim
@@ -45,3 +48,4 @@ ALL_PROXY=socks5://localhost:1080
 
 # If there is a .bashrc file for this host, source it.
 [ -f ~/.bashrc_$(hostname) ] && source ~/.bashrc_$(hostname)
+
