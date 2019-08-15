@@ -37,6 +37,6 @@
     - debug: msg="checking for keepassxc"
     - portage: package=keepassxc update=yes verbose=yes
 
-    - debug: msg="checking for media-video/libva-utils"
-    - portage: package=libva-utils update=yes verbose=yes
+    #- debug: msg="checking for media-video/libva-utils"
+    #- portage: package=libva-utils update=yes verbose=yes
 
