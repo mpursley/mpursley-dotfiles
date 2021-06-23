@@ -2,8 +2,14 @@
 
 source ~/.ssh/environment
 
-## update the shell prompt
-export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$\[\033[00m\] "
+## Update the PS1 prompt
+PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w"
+## Add git branch to PS1 prompt
+PS1="$PS1\e[1;36m(\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \e[m"
+## Add kubectx to PS1 prompt
+PS1="$PS1\e[0;31m(\$(kubectx -c 2>/dev/null)) \e[m "
+## Add a newline, $ and set the color back to normal
+export PS1="$PS1\n\$\[\033[00m\] "
 
 ## import my ssh keys into the ssh agent
 #sh -x ~/bin/ssr
