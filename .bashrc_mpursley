@@ -1,7 +1,5 @@
 ## mpursley's .bashrc file https://github.com/mpursley/mpursley-dotfiles/blob/master/.bashrc
 
-source ~/.ssh/environment
-
 ## Update the PS1 prompt
 PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w "
 ## Add git branch to PS1 prompt
@@ -54,4 +52,3 @@ ALL_PROXY=socks5://localhost:1080
 
 # If there is a .bashrc file for this host, source it.
 [ -f ~/.bashrc_$(hostname) ] && source ~/.bashrc_$(hostname)
-
