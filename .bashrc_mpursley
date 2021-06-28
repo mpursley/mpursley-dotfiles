@@ -3,7 +3,7 @@
 source ~/.ssh/environment
 
 ## Update the PS1 prompt
-PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w"
+PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w "
 ## Add git branch to PS1 prompt
 PS1="$PS1\e[1;36m(\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \e[m"
 ## Add kubectx to PS1 prompt
