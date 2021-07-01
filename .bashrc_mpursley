@@ -52,4 +52,3 @@ ALL_PROXY=socks5://localhost:1080
 
 # If there is a .bashrc file for this host, source it.
 [ -f ~/.bashrc_$(hostname) ] && source ~/.bashrc_$(hostname)
-
