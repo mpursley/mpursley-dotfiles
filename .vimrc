@@ -1,6 +1,10 @@
+" Added for Vundle
+" For Vundle install instructions, see here... https://github.com/VundleVim/Vundle.vim.  E.g.
+" $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" $ vim
+" :PluginInstall
+"
 
-
-" Added for Vundle...
 set nocompatible              " required
 filetype off                  " required
 
