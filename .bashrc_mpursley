@@ -16,7 +16,6 @@ export PS1="$PS1\n\$\[\033[00m\] "
 ## add some envvars
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:~/bin:~/go/bin
-export GOPATH=/home/mpursley/go
 
 ## Share history across shells...
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
@@ -52,3 +51,5 @@ ALL_PROXY=socks5://localhost:1080
 
 # If there is a .bashrc file for this host, source it.
 [ -f ~/.bashrc_$(hostname) ] && source ~/.bashrc_$(hostname)
+
+eval "$(pyenv virtualenv-init -)"
