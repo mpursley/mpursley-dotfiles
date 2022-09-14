@@ -3,4 +3,4 @@
 .viminfo
 .ssh
 !.ssh/config
-.vim/bundle/YouCompleteMe
+.vim/bundle

@@ -148,18 +148,19 @@ color wombat256mod
 
 
 " Enable syntax highlighting
-filetype off
-filetype plugin indent on
+" filetype off
+" filetype plugin indent on
 syntax on
+" Use new regular expression engine
+set re=0
 
 
 "" Showing line numbers and length
 set number    " show line numbers
 set tw=120     " width of document (used by gd)
 set relativenumber
-""set nowrap  " don't automatically wrap on load
 set wrap      " automatically wrap on load
-""set fo-=t   " don't automatically wrap text when typing
+set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=120
 highlight ColorColumn ctermbg=233
 
