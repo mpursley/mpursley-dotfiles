@@ -3,7 +3,7 @@
 ### Clone the repo dotfiles repo:
 ```
 $ cd ~/git
-$ git clone git clone https://github.com/mpursley/mpursley-dotfiles.git
+$ git clone https://github.com/mpursley/mpursley-dotfiles.git
 $ rsync . ~/. --exclude .git -anv
 ## verify you want all those new files in that list...
 $ rsync . ~/. --exclude .git -av
