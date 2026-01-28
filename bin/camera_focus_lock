@@ -1,0 +1,15 @@
+#!/bin/bash
+# Find the C920 device
+DEVICE=$(v4l2-ctl --list-devices | grep -A1 "C920" | grep "/dev/video" | head -n1 | xargs)
+
+if [ -z "$DEVICE" ]; then
+    echo "C920 camera not found"
+    exit 1
+fi
+
+echo "Locking focus for C920 on $DEVICE"
+
+# Disable auto-focus
+v4l2-ctl -d "$DEVICE" -c focus_automatic_continuous=0
+# Set focus to infinity (0)
+v4l2-ctl -d "$DEVICE" -c focus_absolute=10
