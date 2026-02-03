@@ -27,26 +27,8 @@ Plugin 'scrooloose/nerdtree'
 " add vim-colorschemes
 Plugin 'flazz/vim-colorschemes'
 
-"add jedi-vim
-Plugin 'davidhalter/jedi-vim'
-
-" add ctags
-"Plugin 'universal-ctags/ctags'
-
-" add surround
-"Plugin 'tpope/vim-surround'
-
 " add ctrlp
 Plugin 'kien/ctrlp.vim'
-
-" add flake8
-Plugin 'nvie/vim-flake8'
-
-" add python-mode
-Plugin 'python-mode/python-mode'
-
-" add pyflakes
-Plugin 'kevinw/pyflakes-vim'
 
 call vundle#end()            " required
 "filetype plugin indent on    " required
