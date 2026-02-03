@@ -44,7 +44,7 @@ alias gp="git pull --rebase upstream master"
 #        tmux attach || break
 #    done
 #fi
-ALL_PROXY=socks5://localhost:1080
+#ALL_PROXY=socks5://localhost:1080
 
 # this is to fix some clipboard issues..
 #printf "\e[?2004l" > /dev/null
@@ -52,4 +52,4 @@ ALL_PROXY=socks5://localhost:1080
 # If there is a .bashrc file for this host, source it.
 [ -f ~/.bashrc_$(hostname) ] && source ~/.bashrc_$(hostname)
 
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv virtualenv-init -)"
