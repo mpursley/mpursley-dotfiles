@@ -2,8 +2,8 @@
 
 ### Clone the repo dotfiles repo:
 ```
-$ cd ~/git
-$ git clone https://github.com/mpursley/mpursley-dotfiles.git
+$ mkdir ~/git
+$ git clone https://github.com/mpursley/mpursley-dotfiles.git ~/git/.
 $ cd mpursley-dotfiles
 $ rsync . ~/. --exclude .git -anv
 ## verify you want all those new files in that list...
