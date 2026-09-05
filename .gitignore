@@ -1,6 +1,42 @@
-.vault_pass
-.swp
-.viminfo
+## ---- secrets / credentials -------------------------------------------
+## Never commit these to a public repo.
 .ssh
-!.ssh/config
+.gnupg
+.netrc
+.aws
+.config/gcloud
+.kube/config
+.docker/config.json
+.vault_pass
+*.pem
+*.key
+id_rsa*
+id_ecdsa*
+id_ed25519*
+*_crt
+
+## ---- shell / editor history ------------------------------------------
+## History files leak hostnames, internal paths and sometimes secrets
+## that were typed on a command line.
+.bash_history
+.zsh_history
+.sh_history
+.python_history
+.node_repl_history
+.lesshst
+.viminfo
+.zsh_sessions
+.local/share/zsh
+
+## ---- editor scratch --------------------------------------------------
+*.swp
+*.swo
+*.swn
+*~
+.netrwhist
+
+## ---- vim plugins (managed by Vundle/pathogen) ------------------------
 .vim/bundle
+
+## ---- macOS -----------------------------------------------------------
+.DS_Store
